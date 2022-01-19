@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root{
+    --light-red: #FC4445;
+    --light-blue: #3498db;
+    --light-green: #5cdb95;
+    
+ }
+
+
+body{
+     background-color: var(--light-blue);   
+ }
+
+ .container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    padding: 20px 30px;
+ }
+
+ h1{
+     text-align: center;
+     margin-bottom: 20px;
+
+ }
+
+ form{
+     display: flex;
+     flex-direction: column;
+ }
+
+form input{
+    margin-bottom: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+.buttons{
+     text-align: center;
+ }
+
+.buttons button{
+     margin-top: 10px;
+     padding: 5px 20px;
+     width: 100px;
+     background: none; /*important for the stacking*/
+     border: 1px solid var(--light-blue);
+     color: var(--light-blue);
+     cursor: pointer;
+     position: relative;
+     transition: 0.2s ease-in;
+}
+
+.buttons button:before{
+     content:"";
+     background-color: var(--light-blue);
+     position: absolute;
+     top: 50%;
+     right: 50%;
+     left: 50%;
+     bottom: 50%;
+     z-index: -1;
+     transition: 0.2s ease-in;
+ }
+
+.buttons button:hover{
+    color: #FFF;
+
+}
+
+button:hover:before{
+    top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+ }
+
+ .error{
+     color: #FC4445;
+     font-size: 14px;
+ }
+
+ ul{
+     list-style-type: none;
+     font-size: 14px;
+     margin: 10px 0;
+ }
+
+ .password , .confirmPassword{
+     position: relative;
+ }
+
+.fas{
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     right: 10px;
+     cursor: pointer;
+
+}
+
+ #password, #confirmPassword{
+     width: 100%;
+     padding: 5px 35px 5px 5px;
+ }
+
+.fa-eye{
+    visibility: hidden   
+}
+
+
+
+
+
+
+
