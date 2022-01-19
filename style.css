@@ -43,6 +43,7 @@ form input{
     margin-bottom: 5px;
     outline: none;
     padding: 5px;
+    border: 1px solid #d1d1d1;
 }
 
 .buttons{
